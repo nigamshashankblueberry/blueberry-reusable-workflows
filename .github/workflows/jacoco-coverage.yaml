@@ -8,7 +8,7 @@ permissions:
 on:
   workflow_call:
     inputs:
-      ENV: 
+      environment: 
         description: "Environment to apply changes"
         default: "dev"
         type: string
@@ -18,7 +18,7 @@ on:
 jobs:
   build:
     name: "Jacoco Coverage Reusable Run"
-    environment: ${{ github.event.inputs.ENV}}
+    environment: ${{ github.event.inputs.environment}}
     runs-on: ubuntu-latest
     permissions:
       actions: read
