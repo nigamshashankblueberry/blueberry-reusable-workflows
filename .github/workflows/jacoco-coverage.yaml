@@ -1,4 +1,4 @@
-name: jacoco-coverage-reusable
+name: "jacoco-coverage-reusable"
 permissions:
   contents: read
   id-token: write
@@ -17,6 +17,7 @@ on:
 
 jobs:
   build:
+    name: "Jacoco Coverage Reusable Run"
     environment: ${{ github.event.inputs.ENV}}
     runs-on: ubuntu-latest
     permissions:
